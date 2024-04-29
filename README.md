@@ -64,10 +64,7 @@ Example
 
 #### <a name="md-login"></a> login(userid, password, twoFA, vendor_code, api_secret, imei)
 connect to the broker, only once this function has returned successfully can any other operations be performed
-Example:
-#For TOTP Automation, Reffer below Mentioned Command 
-#TOKEN = 'Q65C5R7WJ2AR77VA623OC2SI5D5KM447'
-#otp = pyotp.TOTP(TOKEN).now()
+Example: 
 ```
 #credentials
 user    = <uid>
@@ -2167,49 +2164,49 @@ send a list of instruments to stop watch
 
 Possible Values for Order States are as follows
 
-PENDING :- The order has been submitted but is awaiting further processing.
+PENDING
 
-CANCELED :- The order has been canceled by the trader before being executed.
+CANCELED
 
-OPEN:- The order is active and waiting to be matched with a counterparty.
+OPEN
 
-REJECTED:- The order has been declined due to certain criteria not being met.
+REJECTED
 
-COMPLETE:- The order has been successfully executed and completed.
+COMPLETE
 
-TRIGGER_PENDING:- A specific condition must be met before the order can become active.
+TRIGGER_PENDING
 
-INVALID_STATUS_TYPE:- The provided order status is not recognized or valid.
+INVALID_STATUS_TYPE
 
 ### The Orders will have a request status or report type for modify/cancel the possible values are as follows
 
-NewAck :- acknowledgement that a new order request has been received.
+NewAck
 
-ModAck :- acknowledgement that a modification request for an existing order has been received.
+ModAck
 
-CanAck :- acknowledgement that a request to cancel an order has been received.
+CanAck
 
-PendingNew :- The request to place a new order is pending further review.
+PendingNew
 
-PendingReplace :- The request to modify an existing order is pending further review.
+PendingReplace
 
-PendingCancel :- The request to cancel an order is pending further review.
+PendingCancel
 
-New :- Confirmation that a new order has been successfully placed.
+New
 
-Replaced :- confirmation that an existing order has been successfully modified.
+Replaced
 
-Canceled :- confirmation that an order has been successfully canceled.
+Canceled
 
-Fill :- notification that an order has been fully or partially executed.
+Fill
 
-Rejected :- notification that an order has been rejected and not executed.
+Rejected
 
-ReplaceRejected :- Notification that a request to modify an order has been rejected.
+ReplaceRejected
 
-CancelRejected :- Notification that a request to cancel an order has been rejected.
+CancelRejected
 
-INVALID_REPORT_TYPE :- The provided report type for modification/cancellation is not recognized or valid.
+INVALID_REPORT_TYPE
 
 
 ## <a name="md-example-basic"></a> Example - Getting Started
@@ -2229,7 +2226,7 @@ api = ShoonyaApiPy()
 #credentials
 user        = '< user id>'
 u_pwd       = '< password >'
-factor2     = 'OTP/TOTP'
+factor2     = 'second factor
 vc          = 'vendor code'
 app_key     = 'API key'
 imei        = 'uniq identifier'
